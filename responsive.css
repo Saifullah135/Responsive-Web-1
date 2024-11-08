@@ -1,0 +1,133 @@
+:root{
+    --primaryFont:'Montserrrat', sans-serif;
+    --secFont:'Fraunces', serif;
+
+    --darkCyan:hsl(158, 36%, 37%);
+    --creamColor:hsl(30, 38%, 92%);
+    --veryDarkBlue:hsl(212, 21%, 14%);
+    --darkGrayisBlue:hsl(228, 12%, 48%);
+    --whiteColor:hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-family: var(--primaryFont);
+    font-weight: 400;
+    font-size: 14px;
+    background-color: var(--creamColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--secFont);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+p{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.card{
+    width: 600px;
+    display: flex;
+}
+.image{
+    flex-basis: 50%;
+}
+.image img.desktop{
+    border-radius: 10px 0 0 10px; 
+   height: 450px;
+}
+.image img.mobile{
+    border-radius: 10px 10px 0 0;
+        display: none;
+}
+  
+.cbody{
+    flex-basis: 50%;
+    background-color: var(--whiteColor);
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+}
+.cbody h2{
+    color: var(--veryDarkBlue);
+    font-size: 32px;
+}
+.cbody h6{
+    color: var(--darkGrayisBlue);
+    font-family: var(--primaryFont);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.cbody p{
+    font-size: 14px;
+    color: var(--darkGrayisBlue);
+    line-height: 1.5em;
+}
+.cbody p.price{
+    font-family: var(--secFont);
+    color: var(--darkCyan);
+    font-size: 32px;
+    font-weight: bold;
+}
+.cbody p.price span{
+    font-family: var(--primaryFont);
+    color: var(--darkGrayisBlue);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+    position: relative;
+    top: -5px;
+    left: 5px;
+}
+.cbody button{
+    background-color: var(--darkCyan);
+    border: 0;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--whiteColor);
+}
+.cbody button img{
+    width: 15px;
+    color: white;
+}
+
+
+
+@media only screen and (max-width:600px) {
+    .card{
+        width: 90%;
+        flex-direction: column;
+    }
+    .image img.desktop{
+        display: none;
+    }
+    .image img.mobile{
+        display: block;
+    }
+    .cbody{
+        border-radius: 0 0 10px 10px;
+    }
+}
